@@ -18,7 +18,17 @@ int main() {
 	SDL_Surface* surf = SDL_GetWindowSurface(win);
 	SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 0xff, 0x00, 0x00));
 	SDL_UpdateWindowSurface(win);
-	SDL_Delay(2000);
+
+	auto running = true;
+	while (running) {
+		SDL_Event event;
+		while (SDL_PollEvent(&event)) {
+			if (event.type == SDL_QUIT) {
+				running = false;
+			}
+		}
+	}
+
 	SDL_DestroyWindow(win);
 	SDL_Quit();
 	return 0;
