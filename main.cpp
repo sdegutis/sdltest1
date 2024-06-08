@@ -1,4 +1,4 @@
-#include "sdlgame1.h"
+#include "sdlgame1.hpp"
 #include <Box2D.h>
 
 extern "C"
