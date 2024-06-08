@@ -1,0 +1,4 @@
+.vs/
+**/[Pp]ackages/*
+x64/
+*.user
